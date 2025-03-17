@@ -1,23 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const imageData = {
-        women_story: ["001.jpg", "002.jpg", "003.jpg"],
-        cityscape: ["001.jpg", "002.jpg", "003.jpg"],
-        self_expression: ["001.jpg", "002.jpg", "003.jpg"]
-    };
-
-    for (let category in imageData) {
-        let slider = document.getElementById(`slider-${category}`);
-        if (slider) {
-            imageData[category].forEach(image => {
-                let img = document.createElement("img");
-                img.src = `images/${category}/${image}`;  // 确保你在 images 里分类存放
-                img.alt = category;
-                slider.appendChild(img);
-            });
-        }
-    }
-});
-
     let currentIndex = 0;
     const sections = document.querySelectorAll(".section");
     const galleryContainer = document.querySelector(".gallery-container");
