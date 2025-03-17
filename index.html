@@ -8,21 +8,32 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
 </head>
 <body>
+    <div class="header">
+        <div class="language-switcher">
+            <button onclick="switchLanguage('en')">English</button> | 
+            <button onclick="switchLanguage('zh')">中文</button>
+        </div>
+        <h1 data-text-en="Z.J.M Photography" data-text-zh="Z.J.M 摄影">Z.J.M 摄影</h1>
+    </div>
+
     <div class="category-selector">
         <button onclick="showCategory('women')">Women’s Stories</button>
         <button onclick="showCategory('cityscape')">Cityscapes</button>
         <button onclick="showCategory('self')">Self-Expression</button>
     </div>
 
-    <div id="women" class="flipbook-container">
+    <div id="women" class="flipbook-container" style="display:none;">
+        <h2 data-text-en="Women’s Stories" data-text-zh="女性故事">女性故事</h2>
         <div class="flipbook" id="flipbook-women"></div>
     </div>
 
     <div id="cityscape" class="flipbook-container" style="display:none;">
+        <h2 data-text-en="Cityscapes" data-text-zh="城市风景">城市风景</h2>
         <div class="flipbook" id="flipbook-cityscape"></div>
     </div>
 
     <div id="self" class="flipbook-container" style="display:none;">
+        <h2 data-text-en="Self-Expression" data-text-zh="自我表达">自我表达</h2>
         <div class="flipbook" id="flipbook-self"></div>
     </div>
 
