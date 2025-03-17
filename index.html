@@ -3,33 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Z.J.M Photography</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Z.J.M Photography - Multiple Flipbooks</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
 </head>
 <body>
-    <div class="header">
-        Z.J.M Photography
-        <div class="language-switcher">
-            <button onclick="switchLanguage('en')">English</button> | 
-            <button onclick="switchLanguage('zh')">中文</button>
-        </div>
+    <div class="category-selector">
+        <button onclick="showCategory('women')">Women’s Stories</button>
+        <button onclick="showCategory('cityscape')">Cityscapes</button>
+        <button onclick="showCategory('self')">Self-Expression</button>
     </div>
-    <div class="gallery-container">
-        <div class="gallery">
-            <div class="section" data-category="women">
-                <h2 data-text-en="Women’s Stories" data-text-zh="女性故事">女性故事</h2>
-                <div class="image-slider" id="slider-women"></div>
-            </div>
-            <div class="section" data-category="cityscape">
-                <h2 data-text-en="Cityscapes" data-text-zh="城市风景">城市风景</h2>
-                <div class="image-slider" id="slider-cityscape"></div>
-            </div>
-            <div class="section" data-category="self">
-                <h2 data-text-en="Self-Expression" data-text-zh="自我表达">自我表达</h2>
-                <div class="image-slider" id="slider-self"></div>
-            </div>
-        </div>
+
+    <div id="women" class="flipbook-container">
+        <div class="flipbook" id="flipbook-women"></div>
     </div>
-    <script src="js/script.js"></script>
+
+    <div id="cityscape" class="flipbook-container" style="display:none;">
+        <div class="flipbook" id="flipbook-cityscape"></div>
+    </div>
+
+    <div id="self" class="flipbook-container" style="display:none;">
+        <div class="flipbook" id="flipbook-self"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
