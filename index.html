@@ -8,26 +8,33 @@
 </head>
 <body>
     <div class="header">
-        Z.J.M Photography
+        <h1>Z.J.M Photography</h1>
         <div class="language-switcher">
             <button onclick="switchLanguage('en')">English</button> | 
             <button onclick="switchLanguage('zh')">中文</button>
         </div>
     </div>
-    <div class="gallery">
-        <div class="section hidden" data-category="women">
-            <img src="images/women_story.jpg" alt="女性故事" data-alt-en="Women’s Stories" data-alt-zh="女性故事">
-            <p data-text-en="Women’s Stories" data-text-zh="女性故事">女性故事</p>
-        </div>
-        <div class="section hidden" data-category="cityscape">
-            <img src="images/cityscape.jpg" alt="城市风景" data-alt-en="Cityscapes" data-alt-zh="城市风景">
-            <p data-text-en="Cityscapes" data-text-zh="城市风景">城市风景</p>
-        </div>
-        <div class="section hidden" data-category="self">
-            <img src="images/self_expression.jpg" alt="自我表达" data-alt-en="Self-Expression" data-alt-zh="自我表达">
-            <p data-text-en="Self-Expression" data-text-zh="自我表达">自我表达</p>
+    
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="images/women_story.jpg" alt="女性故事" data-alt-en="Women’s Stories" data-alt-zh="女性故事">
+                <p data-text-en="Women’s Stories" data-text-zh="女性故事">女性故事</p>
+            </div>
+            <div class="slide">
+                <img src="images/cityscape.jpg" alt="城市风景" data-alt-en="Cityscapes" data-alt-zh="城市风景">
+                <p data-text-en="Cityscapes" data-text-zh="城市风景">城市风景</p>
+            </div>
+            <div class="slide">
+                <img src="images/self_expression.jpg" alt="自我表达" data-alt-en="Self-Expression" data-alt-zh="自我表达">
+                <p data-text-en="Self-Expression" data-text-zh="自我表达">自我表达</p>
+            </div>
         </div>
     </div>
+
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+    <button class="next" onclick="nextSlide()">&#10095;</button>
+
     <script src="js/script.js"></script>
 </body>
 </html>
