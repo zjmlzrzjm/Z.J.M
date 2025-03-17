@@ -1,49 +1,40 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let currentIndex = 0;
-    const sections = document.querySelectorAll(".section");
-    const galleryContainer = document.querySelector(".gallery-container");
+    const categories = ['women', 'cityscape', 'self'];
 
-    function updateGalleryPosition() {
-        galleryContainer.style.transform = `translateX(-${currentIndex * 100}vw)`;
-    }
-
-    document.addEventListener("wheel", function (event) {
-        if (event.deltaY > 0) {
-            currentIndex = Math.min(currentIndex + 1, sections.length - 1);
-        } else {
-            currentIndex = Math.max(currentIndex - 1, 0);
+    // 自动加载图片
+    function loadImages(category) {
+        const flipbookContainer = document.getElementById(`flipbook-${category}`);
+        flipbookContainer.innerHTML = ''; // 清空之前的内容
+        
+        // 假设每个分类的图片按一定规则命名，比如：women1.jpg, women2.jpg ...
+        for (let i = 1; i <= 3; i++) {  // 假设每个分类有3张图片
+            const page = document.createElement('div');
+            page.classList.add('page');
+            page.innerHTML = `<img src="images/${category}/${category}${i}.jpg" alt="Page ${i}">`;
+            flipbookContainer.appendChild(page);
         }
-        updateGalleryPosition();
-    });
-
-    document.addEventListener("keydown", function (event) {
-        if (event.key === "ArrowRight") {
-            currentIndex = Math.min(currentIndex + 1, sections.length - 1);
-        } else if (event.key === "ArrowLeft") {
-            currentIndex = Math.max(currentIndex - 1, 0);
-        }
-        updateGalleryPosition();
-    });
-
-    document.querySelectorAll(".image-slider").forEach(slider => {
-        let images = slider.getElementsByTagName("img");
-        let index = 0;
-
-        function showNextImage() {
-            images[index].classList.remove("active");
-            images[index].classList.add("prev");
-            index = (index + 1) % images.length;
-            images[index].classList.add("active");
-        }
-
-        setInterval(showNextImage, 3000);
-    });
-
-    function switchLanguage(lang) {
-        document.querySelectorAll("[data-text-en]").forEach(el => {
-            el.textContent = lang === "en" ? el.getAttribute("data-text-en") : el.getAttribute("data-text-zh");
+        
+        // 初始化翻书效果
+        $("#" + `flipbook-${category}`).turn({
+            width: 800,
+            height: 600,
+            autoCenter: true,
         });
     }
 
-    window.switchLanguage = switchLanguage;
+    // 切换显示不同分类
+    function showCategory(category) {
+        categories.forEach(c => {
+            const categoryDiv = document.getElementById(c);
+            if (c === category) {
+                categoryDiv.style.display = 'block';
+                loadImages(c);  // 加载图片
+            } else {
+                categoryDiv.style.display = 'none';
+            }
+        });
+    }
+
+    // 默认显示 Women's Stories
+    showCategory('women');
 });
