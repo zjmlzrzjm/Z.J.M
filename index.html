@@ -8,33 +8,28 @@
 </head>
 <body>
     <div class="header">
-        <h1>Z.J.M Photography</h1>
+        Z.J.M Photography
         <div class="language-switcher">
             <button onclick="switchLanguage('en')">English</button> | 
             <button onclick="switchLanguage('zh')">中文</button>
         </div>
     </div>
-    
-    <div class="slider">
-        <div class="slides">
-            <div class="slide">
-                <img src="images/women_story.jpg" alt="女性故事" data-alt-en="Women’s Stories" data-alt-zh="女性故事">
-                <p data-text-en="Women’s Stories" data-text-zh="女性故事">女性故事</p>
+    <div class="gallery-container">
+        <div class="gallery">
+            <div class="section" data-category="women">
+                <h2 data-text-en="Women’s Stories" data-text-zh="女性故事">女性故事</h2>
+                <div class="image-slider" id="slider-women"></div>
             </div>
-            <div class="slide">
-                <img src="images/cityscape.jpg" alt="城市风景" data-alt-en="Cityscapes" data-alt-zh="城市风景">
-                <p data-text-en="Cityscapes" data-text-zh="城市风景">城市风景</p>
+            <div class="section" data-category="cityscape">
+                <h2 data-text-en="Cityscapes" data-text-zh="城市风景">城市风景</h2>
+                <div class="image-slider" id="slider-cityscape"></div>
             </div>
-            <div class="slide">
-                <img src="images/self_expression.jpg" alt="自我表达" data-alt-en="Self-Expression" data-alt-zh="自我表达">
-                <p data-text-en="Self-Expression" data-text-zh="自我表达">自我表达</p>
+            <div class="section" data-category="self">
+                <h2 data-text-en="Self-Expression" data-text-zh="自我表达">自我表达</h2>
+                <div class="image-slider" id="slider-self"></div>
             </div>
         </div>
     </div>
-
-    <button class="prev" onclick="prevSlide()">&#10094;</button>
-    <button class="next" onclick="nextSlide()">&#10095;</button>
-
     <script src="js/script.js"></script>
 </body>
 </html>
