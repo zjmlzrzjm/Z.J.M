@@ -1,59 +1,45 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Z.J.M 的摄影</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/turn.min.js"></script>
 </head>
 <body>
-
-    <!-- 语言切换按钮 -->
     <div class="language-switch">
-        <button onclick="switchLanguage('zh')">中文</button>
-        <button onclick="switchLanguage('en')">English</button>
+        <button onclick="setLanguage('en')">English</button>
+        <button onclick="setLanguage('zh')">中文</button>
     </div>
-
-    <h1 id="page-title">Z.J.M 的摄影</h1>
-
+    
     <div class="category-buttons">
-        <button id="btn-women" onclick="showCategory('women')">Women’s Stories</button>
-        <button id="btn-cityscapes" onclick="showCategory('cityscapes')">Cityscapes</button>
-        <button id="btn-self" onclick="showCategory('self')">Self-Expression</button>
+        <button onclick="showCategory('women')">Women's Stories</button>
+        <button onclick="showCategory('cityscape')">Cityscapes</button>
+        <button onclick="showCategory('self')">Self-Expression</button>
     </div>
-
-    <!-- Women’s Stories -->
+    
     <div id="women" class="flipbook-container" style="display: block;">
         <div class="flipbook">
-            <img src="images/women/women1.jpg" alt="Women’s Stories 1">
-            <img src="images/women/women2.jpg" alt="Women’s Stories 2">
-            <img src="images/women/women3.jpg" alt="Women’s Stories 3">
-            <img src="images/women/women4.jpg" alt="Women’s Stories 4">
+            <img src="images/women/women1.jpg" alt="Women's Stories 1">
+            <img src="images/women/women2.jpg" alt="Women's Stories 2">
         </div>
     </div>
-
-    <!-- Cityscapes -->
-    <div id="cityscapes" class="flipbook-container">
+    
+    <div id="cityscape" class="flipbook-container" style="display: none;">
         <div class="flipbook">
-            <img src="images/city/city1.jpg" alt="Cityscapes 1">
-            <img src="images/city/city2.jpg" alt="Cityscapes 2">
-            <img src="images/city/city3.jpg" alt="Cityscapes 3">
-            <img src="images/city/city4.jpg" alt="Cityscapes 4">
+            <img src="images/cityscape/cityscape1.jpg" alt="Cityscape 1">
+            <img src="images/cityscape/cityscape2.jpg" alt="Cityscape 2">
         </div>
     </div>
-
-    <!-- Self-Expression -->
-    <div id="self" class="flipbook-container">
+    
+    <div id="self" class="flipbook-container" style="display: none;">
         <div class="flipbook">
             <img src="images/self/self1.jpg" alt="Self-Expression 1">
-            <img src="images/self/self2.png" alt="Self-Expression 2">
-            <img src="images/self/self3.jpg" alt="Self-Expression 3">
-            <img src="images/self/self4.jpg" alt="Self-Expression 4">
+            <img src="images/self/self2.jpg" alt="Self-Expression 2">
         </div>
     </div>
-
-    <script src="script.js"></script>
+    
+    <script src="js/script.js"></script>
 </body>
 </html>
