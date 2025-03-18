@@ -1,4 +1,3 @@
-/* script.js */
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".flipbook").forEach(book => {
         $(book).turn({
