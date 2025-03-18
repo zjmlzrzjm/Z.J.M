@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Z.J.M Photography - Multiple Flipbooks</title>
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
 </head>
 <body>
     <div class="header">
@@ -24,26 +25,28 @@
 
     <div id="women" class="flipbook-container" style="display:none;">
         <h2 data-text-en="Women’s Stories" data-text-zh="女性故事">女性故事</h2>
-        <div class="flipbook" id="flipbook-women"></div>
+        <div id="flipbook-women" class="flipbook">
+            <div class="page"><img src="images/women/women1.jpg" alt="Women 1"></div>
+            <div class="page"><img src="images/women/women2.jpg" alt="Women 2"></div>
+        </div>
     </div>
 
     <div id="cityscape" class="flipbook-container" style="display:none;">
         <h2 data-text-en="Cityscapes" data-text-zh="城市风景">城市风景</h2>
-        <div class="flipbook" id="flipbook-cityscape"></div>
+        <div id="flipbook-cityscape" class="flipbook">
+            <div class="page"><img src="images/cityscape/cityscape1.jpg" alt="City 1"></div>
+            <div class="page"><img src="images/cityscape/cityscape2.jpg" alt="City 2"></div>
+            <div class="page"><img src="images/cityscape/cityscape3.jpg" alt="City 3"></div>
+        </div>
     </div>
 
     <div id="self" class="flipbook-container" style="display:none;">
         <h2 data-text-en="Self-Expression" data-text-zh="自我表达">自我表达</h2>
-     <div class="flipbook">
-    <div class="page">
-        <img src="your-image1.jpg" alt="Image 1">
+        <div id="flipbook-self" class="flipbook">
+            <div class="page"><img src="images/self/self1.jpg" alt="Self 1"></div>
+            <div class="page"><img src="images/self/self2.png" alt="Self 2"></div>
+        </div>
     </div>
-    <div class="page">
-        <img src="your-image2.jpg" alt="Image 2">
-    </div>
-    <!-- 更多图片 -->
-</div>
-
 
     <script src="script.js"></script>
 </body>
