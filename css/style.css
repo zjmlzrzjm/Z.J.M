@@ -4,17 +4,13 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 .header {
     padding: 20px;
     background-color: #333;
     color: #fff;
-    text-align: center;
-}
-
-.language-switcher {
-    margin-top: 10px;
 }
 
 button {
@@ -35,31 +31,37 @@ button:hover {
 .category-selector {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
-}
-
-.category-selector button {
-    font-size: 18px;
-    padding: 10px 20px;
+    gap: 15px;
+    margin-top: 20px;
 }
 
 .flipbook-container {
+    display: none;
     text-align: center;
     margin-top: 30px;
-    display: none;
 }
 
 .flipbook {
-    width: 800px;
-    height: 600px;
+    width: 90%;
+    height: 500px;
     margin: 0 auto;
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
 }
 
-.flipbook .page img {
+.flipbook .page {
+    width: 45%;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.flipbook img {
     width: 100%;
-    height: auto;
     border-radius: 5px;
 }
+
