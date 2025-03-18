@@ -33,8 +33,9 @@ window.showCategory = function(category) {
     });
 
     document.getElementById(category).style.display = 'block';
-
-    initializeFlipbook();
+    
+    // 延迟初始化 flipbook 以确保图片已加载
+    setTimeout(initializeFlipbook, 200);
 };
 
 // 初始化 turn.js 翻页效果
