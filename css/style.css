@@ -46,40 +46,20 @@ button:hover {
 .flipbook-container {
     text-align: center;
     margin-top: 30px;
+    display: none;
 }
 
 .flipbook {
-    width: 90%;
-    height: 500px;
+    width: 800px;
+    height: 600px;
     margin: 0 auto;
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    font-size: 30px;
-    margin-top: 30px;
-    font-weight: bold;
-}
-
-/* Add page numbering or "magazine" style */
-.flipbook .page {
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
-}
-
 .flipbook .page img {
     width: 100%;
+    height: auto;
     border-radius: 5px;
-}
-
-/* Page turns and magazine feel */
-.flipbook-container {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
